@@ -15,14 +15,15 @@
             </ul>
         {% else %}
                 <strong>No pages currently in category.</strong>
-            {% endif %}
-        {% else %}
-            The specified category does not exist!
         {% endif %}
+    {% else %}
+        The specified category does not exist!
+    {% endif %}
         </div>
 
         <div>
-            <a href = "/rango/">Home</a>
+            <a href = "/rango/">Home</a></br>
+            <a href="{% url 'add_page' category.slug %}">Add a New Page</a><br />
         </div>
 
     </body>
